@@ -1,2 +1,5 @@
 def reverse(text):
-    pass
+    if text == '':
+        return ''
+    else:
+        return text[::-1]
