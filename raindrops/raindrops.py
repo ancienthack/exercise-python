@@ -1,4 +1,4 @@
-#%%
+# my solution
 def convert(number):
     n = number
     # if n % 3 != 0 and n % 5 != 0 and n % 7 != 0:
@@ -19,3 +19,9 @@ def convert(number):
         return 'Plong'
     else:
         return str(n)
+
+# mentor solution
+def convert(number):
+    return ''.join(drop for divisor, drop in
+                   {3: "Pling", 5: "Plang", 7: "Plong"}.items()
+                   if number % divisor == 0) or str(number)
